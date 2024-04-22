@@ -20,7 +20,9 @@ ul{
 ul li {
     border: 1px solid grey;
     list-style: none;
-    padding: 5px;
+    padding: 15px;
+    
+
 }
 h1{
     text-align: center;
@@ -28,4 +30,24 @@ h1{
 input{
     border: none;
     width: 100%;
+}
+.contenedor {
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.15),
+        0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0,0,0,0.15),
+        0 20px 0px -10px #eee,
+        0 20px 1px -9px rgba(0,0,0,0.15);
+
+}
+.contador {
+    color: rgba(0,0,0,0.27);
+
+}
+.tarea {
+    display: flex;
+    justify-content: space-between;
+}
+.todos {
+    color: rgba(0,0,0,0.27);
 }

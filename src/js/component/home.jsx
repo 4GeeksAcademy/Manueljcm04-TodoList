@@ -8,15 +8,16 @@ const Home = () => {
 	const [ inputValue, setInputValue ] = useState("")
 	const [ todos, setTodos ] = useState([])
 	return (
-		<div className="container">
-			<h1>todos</h1>
+		<div className="container contenedor p-3 mb-2 bg-light text-dark">
+			<h1 class="text-secondary" className="todos">Todos</h1>
 			<ul>
 				<li>
 					<input 
+					class="fs-3 text-muted"
 					type="text" 
 					onChange={(e) => setInputValue(e.target.value)}
 					value={inputValue}
-					onKeyPress={(e) => {
+					onKeyDown={(e) => {
 					if(e.key === "Enter") {
 						setTodos(todos.concat([inputValue]));
 						setInputValue("");
@@ -27,7 +28,7 @@ const Home = () => {
 					</input>
 				</li>
 				{todos.map((item, index) => (
-				<li>
+				<li className="tarea">
 					{item}{" "} 
 					<i 
 					class="fas fa-trash-alt"
@@ -44,7 +45,7 @@ const Home = () => {
 				)
 				}
 			</ul>
-			<div>{todos.length} item left</div>
+			<div className="contador">{todos.length} item left</div>
 		</div>
 	);
 };
